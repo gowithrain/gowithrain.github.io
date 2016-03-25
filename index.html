@@ -3,11 +3,15 @@ layout: default
 title: Gowithrain's Blog
 ---
 
+<div class="title">
+    <a href="/">主页</a>
+    <a class="extra" href="/about/">关于我</a>
+</div>
+
 <div id="home">
-  <h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a target="_blank" href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 </div>
