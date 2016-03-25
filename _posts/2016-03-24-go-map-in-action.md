@@ -27,7 +27,9 @@ map类型和指针、切片（slice）一样，都是引用类型，因此上面
 
 	m = make(map[string]int)
 
-make函数分配和初始化一个map数据结构并且返回一个指向这个结构的指针。在这篇文章中，我们主要聚焦在如何***使用***map，而不关心它的实现细节。
+make函数分配和初始化一个map数据结构并且返回一个指向这个结构的指针。在这篇文章中，
+我们主要聚焦在如何***使用***map，而不关心它的实现细节。
+
 ### map的使用
 ---
 Go提供了一些非常通用的语法来操作map。下面的等式将键值为*route*的值设置为*66*:
@@ -82,6 +84,7 @@ Go提供了一些非常通用的语法来操作map。下面的等式将键值为
 
 	m = map[string]int{}
 
+
 ### 深入研究零值
 ---
 当一个键值不存在时，会返回值类型的零值，这样的设计在实际使用中很方便。
@@ -134,7 +137,9 @@ Go提供了一些非常通用的语法来操作map。下面的等式将键值为
 
 	fmt.Println(len(likes["bacon"]), "people like bacon.")
 
-注意，由于*range*和*len*将*nil*值的切片看作长度为0的切片，所以在上面的两个例子中，即使没有人喜欢*cheese*和*bacon*，也可以正常的工作。
+注意，由于*range*和*len*将*nil*值的切片看作长度为0的切片，所以在上面的两个例子中，
+即使没有人喜欢*cheese*和*bacon*，也可以正常的工作。
+
 ### 键类型
 ---
 正如之前提到的，map的键可以是任意*可比较的*类型。简单地说，在[Go的语言标准](http://golang.org/ref/spec#Comparison_operators)中，精确地定义了*boolean*, *numeric*, *string*, *pointer*, *channel*和*interface*，以及仅包含上述类型的*struct*、*array*为*可比较*类型。slice、map和function不是*可比较的*，这些类型不能用==比较，当然也不能用作map的键。
@@ -178,6 +183,7 @@ Go提供了一些非常通用的语法来操作map。下面的等式将键值为
 
 	n := hits[Key{"/ref/spec", "ch"}]
 
+
 ### 并发
 ---
 [并发访问map并不安全](http://golang.org/doc/faq#atomic_maps):当你并发读或写一个map时，结果是不可预测的。如果需要在多个并发的*goroutine*中对一个map进行读写，访问必须要加入锁机制。一个普遍的保护map的做法是[sync.RWMutex](http://golang.org/pkg/sync/#RWMutex)。
@@ -207,6 +213,7 @@ Go提供了一些非常通用的语法来操作map。下面的等式将键值为
 	counter.m["some_key"]++
 	counter.Unlock()
 	{% endhighlight %}
+
 
 ### 遍历顺序
 ---	
