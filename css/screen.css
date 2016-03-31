@@ -108,6 +108,12 @@ ul.posts span {
     margin-left: 1em;
 }
 
+.site .title a.extra1 {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 1em;
+}
+
 .site .title a.extra:hover {
     color: black;
 }
