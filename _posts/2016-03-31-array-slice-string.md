@@ -1,8 +1,7 @@
 ---
 layout: post
+tags: 翻译 Go 切片 slice
 title: 数组、切片和字符串:append的机制
----
-{{ page.title }}
 ---
 注：本文是Go官方Blog的中文翻译版本，原文链接请
 [点击](https://blog.golang.org/slices)。转载本文请注明出处。

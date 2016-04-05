@@ -2,7 +2,14 @@
 layout: default
 ---
 <div id="post">
-{{ content }}
+  <h2 id="gomap">{{ page.title }}</h2>
+  <p>
+    
+    {% for tag in page.tags%}
+      <mark >{{ tag }}</mark>
+    {% endfor %}
+  </p>
+  {{ content }}
 </div>
 
 <div id="related">

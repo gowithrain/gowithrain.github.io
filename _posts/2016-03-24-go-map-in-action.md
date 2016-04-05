@@ -1,9 +1,9 @@
 ---
 layout: post
+tags: 翻译 Go map 字典
 title: Go语言中的map实践
 ---
-{{ page.title }}
----
+
 注：本文是Go官方Blog的中文翻译版本，原文链接请
 [点击](http://blog.golang.org/go-maps-in-action)。转载本文请注明出处。
 

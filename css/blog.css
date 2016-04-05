@@ -72,7 +72,7 @@
   font-weight: normal;
 }
 .blog-description {
-  font-size: 15px;
+  font-size: 15px !important;
   color: #999;
 }
 
